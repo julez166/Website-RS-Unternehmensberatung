@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RS-Unternehmensberatung: Exklusive Offmarket-Immobilien und schnelle KMU-Kredite. Diskret, seriös, mit 24h-Zusage.">
-    <title>RS-Unternehmensberatung | Exklusive Finanzlösungen & Immobilien</title>
+    <meta name="description" content="RS-Unternehmensberatung: Exklusive Offmarket-Immobilien und schnelle KMU-Kredite.">
+    <title>RS-Unternehmensberatung | Rainer Schöppach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,13 +14,13 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
                         <path d="M16 6L26 26H6L16 6Z" fill="white"/>
                     </svg>
-                    <svg id="logoGradient">
+                    <svg id="logoGradient" style="position:absolute;width:0;height:0">
                         <defs>
                             <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#2563EB"/>
@@ -33,40 +33,66 @@
                     <span class="logo-title">RS-Unternehmensberatung</span>
                     <span class="logo-subtitle">Rainer Schöppach</span>
                 </div>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Start</a>
+                <a href="immobilien.html" class="nav-link">Immobilien</a>
+                <a href="kmu-kredit.html" class="nav-link">KMU-Kredit</a>
+                <a href="ueber-uns.html" class="nav-link">Über Uns</a>
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
             </div>
-            <div class="nav-contact">
-                <a href="mailto:RS-Unternehmensberatung@gmx.de" class="nav-email">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    RS-Unternehmensberatung@gmx.de
-                </a>
-            </div>
+            
+            <a href="mailto:RS-Unternehmensberatung@gmx.de" class="nav-cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Kontakt
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
         </div>
         
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    <span>Über 15 Jahre Erfahrung im Finanz- und Immobiliensektor</span>
+                    <span>Über 15 Jahre Erfahrung</span>
                 </div>
+                
                 <h1 class="hero-title">
                     Exklusive Chancen.<br>
                     <span class="gradient-text">Diskret. Schnell. Seriös.</span>
                 </h1>
+                
                 <p class="hero-description">
-                    Ihr spezialisierter Partner für Offmarket-Immobilien (106.000 € – 623.000 €) und 
-                    maßgeschneiderte KMU-Finanzierungen bis 500.000 € mit Entscheidung innerhalb von 24 Stunden.
+                    Ihr spezialisierter Partner für Offmarket-Immobilien und 
+                    maßgeschneiderte KMU-Finanzierungen mit Entscheidung innerhalb von 24 Stunden.
                 </p>
+                
+                <div class="hero-buttons">
+                    <a href="immobilien.html" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Immobilie finden
+                    </a>
+                    <a href="kmu-kredit.html" class="btn btn-outline btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        KMU-Kredit beantragen
+                    </a>
+                </div>
                 
                 <div class="hero-stats">
                     <div class="stat">
@@ -84,347 +110,155 @@
                         <div class="stat-label">Diskretion</div>
                     </div>
                 </div>
-
-                <div class="hero-trust">
-                    <div class="trust-item">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                        <span>SSL-verschlüsselt</span>
-                    </div>
-                    <div class="trust-item">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                        <span>DSGVO-konform</span>
-                    </div>
-                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Form Container -->
-            <div class="form-wrapper">
-                <div class="form-container">
-                    <div class="form-header">
-                        <div class="form-header-content">
-                            <h2 class="form-title">Kostenlose Erstberatung</h2>
-                            <p class="form-subtitle">In 4 Schritten zu Ihrer individuellen Lösung</p>
-                        </div>
-                        <div class="step-indicator">
-                            <div class="step" data-step="1">
-                                <div class="step-number">1</div>
-                                <div class="step-label">Anliegen</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step" data-step="2">
-                                <div class="step-number">2</div>
-                                <div class="step-label">Details</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step" data-step="3">
-                                <div class="step-number">3</div>
-                                <div class="step-label">Kontakt</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step" data-step="4">
-                                <div class="step-number">4</div>
-                                <div class="step-label">Absenden</div>
-                            </div>
-                        </div>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Unsere Leistungen</span>
+                <h2 class="section-title">Zwei Stärken. Eine Beratung.</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
                     </div>
+                    <h3 class="service-title">Offmarket-Immobilien</h3>
+                    <p class="service-desc">
+                        Exklusive Objekte abseits des öffentlichen Marktes. 
+                        Bestand & Neubau von 106.000 € bis 623.000 €.
+                    </p>
+                    <ul class="service-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Streng vertraulich
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Bonitätsprüfung vor Exposé
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Bundesweites Angebot
+                        </li>
+                    </ul>
+                    <a href="immobilien.html" class="btn btn-primary">
+                        Jetzt anfragen
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
 
-                    <form id="qualification-form" novalidate>
-                        <!-- Schritt 1 -->
-                        <fieldset class="form-step active" id="step-1">
-                            <div class="step-content">
-                                <h3 class="step-heading">Worum geht es?</h3>
-                                <p class="step-description">Wählen Sie Ihr gewünschtes Anliegen aus</p>
-                                
-                                <div class="option-cards">
-                                    <label class="option-card">
-                                        <input type="radio" name="anliegen" value="immobilie" required>
-                                        <div class="option-card-content">
-                                            <div class="option-icon">
-                                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                                </svg>
-                                            </div>
-                                            <div class="option-text">
-                                                <span class="option-title">Immobilie kaufen</span>
-                                                <span class="option-desc">Offmarket-Objekte<br>106.000 € – 623.000 €</span>
-                                            </div>
-                                            <div class="option-check">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="option-card">
-                                        <input type="radio" name="anliegen" value="kmu" required>
-                                        <div class="option-card-content">
-                                            <div class="option-icon">
-                                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="option-text">
-                                                <span class="option-title">KMU-Kredit</span>
-                                                <span class="option-desc">Bis 500.000 €<br>Zusage in 24h</span>
-                                            </div>
-                                            <div class="option-check">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <button type="button" class="btn btn-primary btn-next" onclick="nextStep(1)">
-                                    Weiter zum nächsten Schritt
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </button>
-                            </div>
-                        </fieldset>
-
-                        <!-- Schritt 2 -->
-                        <fieldset class="form-step" id="step-2">
-                            <div class="step-content">
-                                <h3 class="step-heading">Ihre Anforderungen</h3>
-                                <p class="step-description">Helfen Sie uns, Ihre Bedürfnisse besser zu verstehen</p>
-                                
-                                <div id="fields-immobilie" class="dynamic-fields">
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label class="form-label">Kaufpreisrahmen</label>
-                                            <select id="kaufpreisrahmen" name="kaufpreisrahmen" class="form-select" required>
-                                                <option value="" disabled selected>Bitte wählen...</option>
-                                                <option value="100k-250k">100.000 € – 250.000 €</option>
-                                                <option value="250k-450k">250.000 € – 450.000 €</option>
-                                                <option value="450k-623k">450.000 € – 623.000 €+</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-label">Eigenkapital</label>
-                                            <select id="eigenkapital" name="eigenkapital" class="form-select" required>
-                                                <option value="" disabled selected>Bitte wählen...</option>
-                                                <option value="unter_10">Weniger als 10 %</option>
-                                                <option value="10_20">10 % – 20 %</option>
-                                                <option value="ueber_20">Mehr als 20 %</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="fields-kmu" class="dynamic-fields hidden">
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label class="form-label">Kreditsumme</label>
-                                            <select id="kreditsumme" name="kreditsumme" class="form-select" required>
-                                                <option value="" disabled selected>Bitte wählen...</option>
-                                                <option value="bis_100k">Bis 100.000 €</option>
-                                                <option value="100k_250k">100.000 € – 250.000 €</option>
-                                                <option value="250k_500k">250.000 € – 500.000 €</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-label">Selbstständig seit</label>
-                                            <select id="selbststaendig_seit" name="selbststaendig_seit" class="form-select" required>
-                                                <option value="" disabled selected>Bitte wählen...</option>
-                                                <option value="unter_6">Weniger als 6 Monate</option>
-                                                <option value="6_12">6 – 12 Monate</option>
-                                                <option value="ueber_12">Mehr als 12 Monate</option>
-                                            </select>
-                                            <span id="kmu-error" class="error-message"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">BWA oder Jahresabschluss hochladen</label>
-                                        <div class="file-upload">
-                                            <input type="file" id="bwa_upload" name="bwa_upload" accept=".pdf,.jpg,.jpeg,.png" required>
-                                            <div class="file-upload-content">
-                                                <div class="file-upload-icon">
-                                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                                        <polyline points="17 8 12 3 7 8"></polyline>
-                                                        <line x1="12" y1="3" x2="12" y2="15"></line>
-                                                    </svg>
-                                                </div>
-                                                <div class="file-upload-text">
-                                                    <span class="file-upload-title">Datei hier ablegen oder klicken</span>
-                                                    <span class="file-upload-hint">PDF, JPG, PNG (max. 5 MB)</span>
-                                                </div>
-                                                <span id="file-name" class="file-name"></span>
-                                            </div>
-                                        </div>
-                                        <span id="file-error" class="error-message"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Zurück</button>
-                                <button type="button" class="btn btn-primary btn-next" onclick="nextStep(2)">
-                                    Weiter
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </button>
-                            </div>
-                        </fieldset>
-
-                        <!-- Schritt 3 -->
-                        <fieldset class="form-step" id="step-3">
-                            <div class="step-content">
-                                <h3 class="step-heading">Ihre Kontaktdaten</h3>
-                                <p class="step-description">Damit wir Sie erreichen können</p>
-                                
-                                <div class="form-row">
-                                    <div class="form-group full-width">
-                                        <label class="form-label" for="name">Vollständiger Name</label>
-                                        <input type="text" id="name" name="name" class="form-input" placeholder="Max Mustermann" required autocomplete="name">
-                                        <span id="name-error" class="error-message"></span>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label class="form-label" for="email">E-Mail-Adresse</label>
-                                        <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required autocomplete="email">
-                                        <span id="email-error" class="error-message"></span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label" for="telefon">Telefonnummer</label>
-                                        <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="+49 (0) 123 456789" required autocomplete="tel">
-                                        <span id="telefon-error" class="error-message"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <button type="button" class="btn btn-secondary" onclick="prevStep(3)">Zurück</button>
-                                <button type="button" class="btn btn-primary btn-next" onclick="nextStep(3)">
-                                    Zur Überprüfung
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </button>
-                            </div>
-                        </fieldset>
-
-                        <!-- Schritt 4 -->
-                        <fieldset class="form-step" id="step-4">
-                            <div class="step-content">
-                                <h3 class="step-heading">Überprüfung</h3>
-                                <p class="step-description">Bitte prüfen Sie Ihre Angaben</p>
-                                
-                                <div class="summary-card">
-                                    <h4 class="summary-title">Ihre Angaben im Überblick</h4>
-                                    <div class="summary-content" id="summary-list"></div>
-                                </div>
-
-                                <div class="form-group checkbox-group">
-                                    <label class="checkbox-wrapper">
-                                        <input type="checkbox" id="dsgvo" name="dsgvo" required>
-                                        <span class="checkbox-custom"></span>
-                                        <span class="checkbox-text">
-                                            Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *
-                                        </span>
-                                    </label>
-                                    <span id="dsgvo-error" class="error-message"></span>
-                                </div>
-                            </div>
-                            <div class="form-footer">
-                                <button type="button" class="btn btn-secondary" onclick="prevStep(4)">Zurück</button>
-                                <button type="submit" class="btn btn-primary btn-submit">
-                                    <span class="btn-text">Anfrage kostenlos absenden</span>
-                                    <span class="btn-loading hidden">
-                                        <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
-                                            <circle class="spinner-circle" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3"></circle>
-                                        </svg>
-                                        Wird verarbeitet...
-                                    </span>
-                                </button>
-                            </div>
-                        </fieldset>
-
-                        <!-- Erfolg -->
-                        <div class="form-step success-step hidden" id="step-success">
-                            <div class="success-content">
-                                <div class="success-icon">
-                                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                </div>
-                                <h2 class="success-title">Vielen Dank für Ihre Anfrage!</h2>
-                                <p class="success-text">
-                                    Ihre Daten wurden sicher übertragen. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
-                                </p>
-                                <button type="button" class="btn btn-secondary" onclick="location.reload()">
-                                    Neue Anfrage stellen
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">KMU-Finanzierung</h3>
+                    <p class="service-desc">
+                        Schnelle Kredite bis 500.000 € über europäische Bankenpartner. 
+                        Zusage in der Regel innerhalb von 24 Stunden.
+                    </p>
+                    <ul class="service-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Ab 6 Monaten Selbständigkeit
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            24h Zusage
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            EU-Bankenpartner
+                        </li>
+                    </ul>
+                    <a href="kmu-kredit.html" class="btn btn-primary">
+                        Kredit beantragen
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Vorteile Section -->
+    <section class="advantages">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Warum wir?</span>
-                <h2 class="section-title">Ihre Vorteile auf einen Blick</h2>
-                <p class="section-subtitle">Professionell. Diskret. Ergebnisorientiert.</p>
+                <h2 class="section-title">Ihre Vorteile</h2>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg>
                     </div>
-                    <h3 class="feature-title">24h Zusage</h3>
-                    <p class="feature-desc">Schnelle Entscheidungen innerhalb eines Werktages. Keine langen Wartezeiten.</p>
+                    <div class="advantage-content">
+                        <h3>24h Zusage</h3>
+                        <p>Schnelle Entscheidungen innerhalb eines Werktages. Keine langen Wartezeiten.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">100% Diskretion</h3>
-                    <p class="feature-desc">Vertrauliche Behandlung Ihrer Daten und Anliegen. DSGVO-konform.</p>
+                    <div class="advantage-content">
+                        <h3>100% Diskretion</h3>
+                        <p>Vertrauliche Behandlung Ihrer Daten und Anliegen. DSGVO-konform.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                             <path d="M2 17l10 5 10-5"></path>
                             <path d="M2 12l10 5 10-5"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Exklusiver Zugang</h3>
-                    <p class="feature-desc">Offmarket-Objekte und Konditionen, die nicht öffentlich verfügbar sind.</p>
+                    <div class="advantage-content">
+                        <h3>Exklusiver Zugang</h3>
+                        <p>Offmarket-Objekte und Konditionen, die nicht öffentlich verfügbar sind.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
@@ -432,26 +266,10 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Persönliche Beratung</h3>
-                    <p class="feature-desc">Individuelle Betreuung durch Rainer Schöppach mit über 15 Jahren Erfahrung.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-content">
-                <div class="trust-text">
-                    <h2 class="trust-title">Bekannt aus und Partner von</h2>
-                    <p class="trust-desc">Wir arbeiten mit führenden Institutionen zusammen</p>
-                </div>
-                <div class="trust-logos">
-                    <div class="trust-logo">Bundesverband deutscher Banken</div>
-                    <div class="trust-logo">IHK Deutschland</div>
-                    <div class="trust-logo">Immobilien Zeitung</div>
-                    <div class="trust-logo">EU-Förderprogramm</div>
+                    <div class="advantage-content">
+                        <h3>Persönliche Beratung</h3>
+                        <p>Individuelle Betreuung durch Rainer Schöppach mit über 15 Jahren Erfahrung.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -463,8 +281,11 @@
             <div class="cta-content">
                 <h2 class="cta-title">Bereit für den nächsten Schritt?</h2>
                 <p class="cta-text">Kontaktieren Sie uns direkt für eine unverbindliche Erstberatung</p>
-                <div class="cta-actions">
-                    <a href="mailto:RS-Unternehmensberatung@gmx.de" class="btn btn-white btn-large">
+                <div class="cta-buttons">
+                    <a href="kontakt.html" class="btn btn-white btn-large">
+                        Kontakt aufnehmen
+                    </a>
+                    <a href="mailto:RS-Unternehmensberatung@gmx.de" class="btn btn-ghost btn-large">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
@@ -528,7 +349,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
