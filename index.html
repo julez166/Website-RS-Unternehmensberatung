@@ -7,7 +7,7 @@
     <title>RS-Unternehmensberatung | Rainer Schöppach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,17 +16,9 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
-                        <path d="M16 6L26 26H6L16 6Z" fill="white"/>
-                    </svg>
-                    <svg id="logoGradient" style="position:absolute;width:0;height:0">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#2563EB"/>
-                                <stop offset="100%" style="stop-color:#7C3AED"/>
-                            </linearGradient>
-                        </defs>
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <rect width="36" height="36" rx="8" fill="#1E3A5F"/>
+                        <path d="M18 8L28 28H8L18 8Z" fill="#D4AF37"/>
                     </svg>
                 </div>
                 <div class="logo-text">
@@ -44,10 +36,6 @@
             </div>
             
             <a href="mailto:RS-Unternehmensberatung@gmx.de" class="nav-cta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
                 Kontakt
             </a>
         </div>
@@ -55,59 +43,90 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-glow hero-glow-1"></div>
-            <div class="hero-glow hero-glow-2"></div>
-        </div>
-        
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>Über 15 Jahre Erfahrung</span>
+                    <span>Über 15 Jahre Erfahrung im Finanzsektor</span>
                 </div>
                 
                 <h1 class="hero-title">
-                    Exklusive Chancen.<br>
-                    <span class="gradient-text">Diskret. Schnell. Seriös.</span>
+                    Ihr Partner für<br>
+                    <span class="accent-text">exklusive Immobilien</span><br>
+                    und Finanzierungslösungen
                 </h1>
                 
                 <p class="hero-description">
-                    Ihr spezialisierter Partner für Offmarket-Immobilien und 
-                    maßgeschneiderte KMU-Finanzierungen mit Entscheidung innerhalb von 24 Stunden.
+                    Diskrete Vermittlung von Offmarket-Objekten und maßgeschneiderte 
+                    KMU-Kredite mit persönlicher Betreuung durch Rainer Schöppach.
                 </p>
                 
                 <div class="hero-buttons">
-                    <a href="immobilien.html" class="btn btn-primary btn-large">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                        Immobilie finden
+                    <a href="immobilien.html" class="btn btn-primary">
+                        Immobilien entdecken
                     </a>
-                    <a href="kmu-kredit.html" class="btn btn-outline btn-large">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                        KMU-Kredit beantragen
+                    <a href="kmu-kredit.html" class="btn btn-secondary">
+                        Kredit beantragen
                     </a>
                 </div>
                 
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-value">24h</div>
-                        <div class="stat-label">Entscheidungszeit</div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-number">24h</span>
+                        <span class="trust-label">Entscheidungszeit</span>
                     </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <div class="stat-value">500k€</div>
-                        <div class="stat-label">Max. Kreditsumme</div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">500k€</span>
+                        <span class="trust-label">Max. Kreditsumme</span>
                     </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">Diskretion</div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">100%</span>
+                        <span class="trust-label">Diskretion</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="team-photo.jpg" alt="RS-Unternehmensberatung Team">
+                <div class="image-accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-content">
+                    <span class="section-label">Willkommen</span>
+                    <h2 class="section-title">Zwei Stärken.<br>Eine Beratung.</h2>
+                    <p class="intro-text">
+                        Als spezialisierte Unternehmensberatung verbinden wir exklusive Offmarket-Immobilien 
+                        mit maßgeschneiderten Finanzierungslösungen für den Mittelstand. Unser Fokus liegt 
+                        auf Diskretion, Schnelligkeit und persönlicher Betreuung.
+                    </p>
+                    <a href="ueber-uns.html" class="link-arrow">
+                        Mehr über uns
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="intro-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Jahre Erfahrung</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Vermittelte Objekte</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Kundenzufriedenheit</span>
                     </div>
                 </div>
             </div>
@@ -118,14 +137,15 @@
     <section class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Unsere Leistungen</span>
-                <h2 class="section-title">Zwei Stärken. Eine Beratung.</h2>
+                <span class="section-label">Leistungen</span>
+                <h2 class="section-title">Unsere Spezialgebiete</h2>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="service-number">01</div>
                     <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
@@ -133,40 +153,22 @@
                     <h3 class="service-title">Offmarket-Immobilien</h3>
                     <p class="service-desc">
                         Exklusive Objekte abseits des öffentlichen Marktes. 
-                        Bestand & Neubau von 106.000 € bis 623.000 €.
+                        Bestand & Neubau von 106.000 € bis 623.000 € bundesweit.
                     </p>
                     <ul class="service-features">
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Streng vertraulich
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Bonitätsprüfung vor Exposé
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Bundesweites Angebot
-                        </li>
+                        <li>Streng vertraulich</li>
+                        <li>Bonitätsprüfung vor Exposé</li>
+                        <li>Bundesweites Netzwerk</li>
                     </ul>
-                    <a href="immobilien.html" class="btn btn-primary">
-                        Jetzt anfragen
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+                    <a href="immobilien.html" class="service-link">
+                        Jetzt anfragen →
                     </a>
                 </div>
 
                 <div class="service-card">
+                    <div class="service-number">02</div>
                     <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                         </svg>
@@ -177,98 +179,90 @@
                         Zusage in der Regel innerhalb von 24 Stunden.
                     </p>
                     <ul class="service-features">
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            Ab 6 Monaten Selbständigkeit
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            24h Zusage
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            EU-Bankenpartner
-                        </li>
+                        <li>Ab 6 Monaten Selbstständigkeit</li>
+                        <li>24h Zusage</li>
+                        <li>EU-Bankenpartner</li>
                     </ul>
-                    <a href="kmu-kredit.html" class="btn btn-primary">
-                        Kredit beantragen
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+                    <a href="kmu-kredit.html" class="service-link">
+                        Kredit beantragen →
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vorteile Section -->
-    <section class="advantages">
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="team-grid">
+                <div class="team-image">
+                    <img src="team-photo.jpg" alt="RS-Unternehmensberatung Team">
+                </div>
+                <div class="team-content">
+                    <span class="section-label">Über uns</span>
+                    <h2 class="section-title">Persönliche Beratung<br>mit Erfahrung</h2>
+                    <p class="team-text">
+                        Hinter RS-Unternehmensberatung steht Rainer Schöppach mit über 15 Jahren 
+                        Erfahrung im Finanz- und Immobiliensektor. Wir arbeiten mit einem kleinen, 
+                        spezialisierten Team, um jedem Kunden die Aufmerksamkeit zu geben, die er verdient.
+                    </p>
+                    <p class="team-text">
+                        Unser Ansatz: Weniger ist mehr. Wir nehmen nur eine begrenzte Anzahl 
+                        von Mandaten an, um höchste Qualität und Diskretion zu gewährleisten.
+                    </p>
+                    <a href="ueber-uns.html" class="btn btn-primary">
+                        Team kennenlernen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Warum wir?</span>
-                <h2 class="section-title">Ihre Vorteile</h2>
+                <span class="section-label">Referenzen</span>
+                <h2 class="section-title">Was unsere Kunden sagen</h2>
             </div>
             
-            <div class="advantages-grid">
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Diskrete Abwicklung und schnelle Entscheidung. Genau das, was wir für unser 
+                        Immobilienprojekt gebraucht haben."
                     </div>
-                    <div class="advantage-content">
-                        <h3>24h Zusage</h3>
-                        <p>Schnelle Entscheidungen innerhalb eines Werktages. Keine langen Wartezeiten.</p>
-                    </div>
-                </div>
-
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                    </div>
-                    <div class="advantage-content">
-                        <h3>100% Diskretion</h3>
-                        <p>Vertrauliche Behandlung Ihrer Daten und Anliegen. DSGVO-konform.</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Michael K.</span>
+                            <span class="author-role">Immobilieninvestor, München</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                        </svg>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Innerhalb von 24 Stunden hatten wir die Kreditzusage. Unschlagbar schnell 
+                        und professionell."
                     </div>
-                    <div class="advantage-content">
-                        <h3>Exklusiver Zugang</h3>
-                        <p>Offmarket-Objekte und Konditionen, die nicht öffentlich verfügbar sind.</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Sandra W.</span>
+                            <span class="author-role">Geschäftsführerin, Hamburg</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="advantage-item">
-                    <div class="advantage-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Herr Schöppach hat uns durch den gesamten Prozess begleitet. Sehr vertrauenswürdig 
+                        und kompetent."
                     </div>
-                    <div class="advantage-content">
-                        <h3>Persönliche Beratung</h3>
-                        <p>Individuelle Betreuung durch Rainer Schöppach mit über 15 Jahren Erfahrung.</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-name">Thomas B.</span>
+                            <span class="author-role">Unternehmer, Berlin</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -279,17 +273,15 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Bereit für den nächsten Schritt?</h2>
-                <p class="cta-text">Kontaktieren Sie uns direkt für eine unverbindliche Erstberatung</p>
+                <h2 class="cta-title">Lassen Sie uns sprechen</h2>
+                <p class="cta-text">
+                    Vereinbaren Sie ein unverbindliches Erstgespräch. Wir nehmen uns Zeit für Ihr Anliegen.
+                </p>
                 <div class="cta-buttons">
-                    <a href="kontakt.html" class="btn btn-white btn-large">
-                        Kontakt aufnehmen
+                    <a href="kontakt.html" class="btn btn-primary btn-large">
+                        Termin vereinbaren
                     </a>
-                    <a href="mailto:RS-Unternehmensberatung@gmx.de" class="btn btn-ghost btn-large">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
+                    <a href="mailto:RS-Unternehmensberatung@gmx.de" class="btn btn-outline btn-large">
                         E-Mail schreiben
                     </a>
                 </div>
@@ -304,9 +296,9 @@
                 <div class="footer-brand">
                     <div class="logo">
                         <div class="logo-icon">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <rect width="32" height="32" rx="8" fill="url(#footerGradient)"/>
-                                <path d="M16 6L26 26H6L16 6Z" fill="white"/>
+                            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                                <rect width="36" height="36" rx="8" fill="#1E3A5F"/>
+                                <path d="M18 8L28 28H8L18 8Z" fill="#D4AF37"/>
                             </svg>
                         </div>
                         <div class="logo-text">
