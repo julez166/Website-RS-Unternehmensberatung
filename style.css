@@ -594,3 +594,23 @@ body {
 .hidden {
     display: none !important;
 }
+/* --- Footer Kontakt-Ergänzung --- */
+.footer-contact {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #94A3B8;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-contact strong {
+    color: #F8FAFC;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footer-contact a:hover {
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+}
