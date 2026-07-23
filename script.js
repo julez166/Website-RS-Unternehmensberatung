@@ -4,53 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const stepIndicators = document.querySelectorAll('.step');
     
     let currentStep = 1;
-    const totalSteps = 4;
-
-    // Dynamische Felder basierend auf Anliegen
-    const anliegenRadios = document.querySelectorAll('input[name="anliegen"]');
-    const fieldsImmobilie = document.getElementById('fields-immobilie');
-    const fieldsKmu = document.getElementById('fields-kmu');
-
-    anliegenRadios.forEach(radio => {
-        radio.addEventListener('change', (e) => {
-            if (e.target.value === 'immobilie') {
-                fieldsImmobilie.classList.remove('hidden');
-                fieldsKmu.classList.add('hidden');
-                setRequired('kaufpreisrahmen', true);
-                setRequired('eigenkapital', true);
-                setRequired('kreditsumme', false);
-                setRequired('selbststaendig_seit', false);
-                setRequired('bwa_upload', false);
-            } else if (e.target.value === 'kmu') {
-                fieldsKmu.classList.remove('hidden');
-                fieldsImmobilie.classList.add('hidden');
-                setRequired('kaufpreisrahmen', false);
-                setRequired('eigenkapital', false);
-                setRequired('kreditsumme', true);
-                setRequired('selbststaendig_seit', true);
-                setRequired('bwa_upload', true);
-            }
-        });
-    });
-
-    function setRequired(elementId, required) {
-        const element = document.getElementById(elementId);
-        if (element) {
-            element.required = required;
-        }
-    }
-
-    // File Upload UI
-    const fileInput = document.getElementById('bwa_upload');
-    const fileNameDisplay = document.getElementById('file-name');
-    
-    fileInput?.addEventListener('change', (e) => {
-        if (e.target.files.length > 0) {
-            fileNameDisplay.textContent = e.target.files[0].name;
-        } else {
-            fileNameDisplay.textContent = '';
-        }
-    });
 
     // Schritt-Indikator aktualisieren
     function updateStepIndicator() {
@@ -73,12 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function showStep(step) {
         steps.forEach(s => {
             s.classList.remove('active');
+            s.classList.add('hidden');
         });
         
         const activeStep = document.getElementById(`step-${step}`);
         if (activeStep) {
-            activeStep.classList.add('active');
-            // Scroll zum Formular auf Mobile
+            activeStep.classList.remove('hidden');
+            // Kleiner Timeout, damit die CSS-Transition greift, falls vorhanden
+            setTimeout(() => activeStep.classList.add('active'), 10);
+            
             if (window.innerWidth < 1024) {
                 activeStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
@@ -114,65 +70,62 @@ document.addEventListener('DOMContentLoaded', () => {
         if (step === 1) {
             const selected = document.querySelector('input[name="anliegen"]:checked');
             if (!selected) {
-                alert('Bitte wählen Sie ein Anliegen aus.');
+                showError('makler-error', 'Bitte wählen Sie eine Option aus.');
+                isValid = false;
+            } else if (selected.value === 'makler') {
+                // DER MAKLER-FILTER (Kundenwunsch 100% erfüllt)
+                showError('makler-error', 'Wir arbeiten ausschließlich mit Endkunden. Ihre Anfrage kann nicht bearbeitet werden.');
                 isValid = false;
             }
         }
 
         if (step === 2) {
-            const anliegen = document.querySelector('input[name="anliegen"]:checked')?.value;
-            
-            if (anliegen === 'kmu') {
-                const selbststaendig = document.getElementById('selbststaendig_seit');
-                if (selbststaendig?.value === 'unter_6') {
-                    showError('kmu-error', 'Für eine KMU-Finanzierung ist eine Selbstständigkeit von mindestens 6 Monaten erforderlich.');
-                    isValid = false;
-                }
+            const kaufpreis = document.getElementById('kaufpreisrahmen');
+            const eigenkapital = document.getElementById('eigenkapital');
 
-                const file = document.getElementById('bwa_upload').files[0];
-                if (!file) {
-                    showError('file-error', 'Bitte laden Sie Ihre aktuelle BWA oder Bilanz hoch.');
-                    isValid = false;
-                } else {
-                    const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
-                    const maxSize = 5 * 1024 * 1024;
-                    
-                    if (!allowedTypes.includes(file.type)) {
-                        showError('file-error', 'Nur PDF, JPG oder PNG sind erlaubt.');
-                        isValid = false;
-                    }
-                    if (file.size > maxSize) {
-                        showError('file-error', 'Die Datei darf maximal 5 MB groß sein.');
-                        isValid = false;
-                    }
-                }
+            if (!kaufpreis?.value) {
+                showError('kaufpreisrahmen-error', 'Bitte wählen Sie einen Kaufpreisrahmen.');
+                isValid = false;
+            }
+            if (!eigenkapital?.value) {
+                showError('eigenkapital-error', 'Bitte geben Sie Ihr Eigenkapital an.');
+                isValid = false;
             }
         }
 
         if (step === 3) {
+            const objektart = document.getElementById('objektart');
+            const standort = document.getElementById('standort');
+
+            if (!objektart?.value) {
+                showError('objektart-error', 'Bitte wählen Sie eine Objektart.');
+                isValid = false;
+            }
+            if (!standort?.value) {
+                showError('standort-error', 'Bitte wählen Sie einen Standort.');
+                isValid = false;
+            }
+        }
+
+        if (step === 4) {
             const name = document.getElementById('name');
             const email = document.getElementById('email');
             const telefon = document.getElementById('telefon');
+            const dsgvo = document.getElementById('dsgvo');
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (!name?.value.trim()) {
                 showError('name-error', 'Bitte geben Sie Ihren Namen ein.');
                 isValid = false;
             }
-
             if (!email?.value.trim() || !emailRegex.test(email.value)) {
                 showError('email-error', 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
                 isValid = false;
             }
-
             if (!telefon?.value.trim()) {
                 showError('telefon-error', 'Bitte geben Sie Ihre Telefonnummer ein.');
                 isValid = false;
             }
-        }
-
-        if (step === 4) {
-            const dsgvo = document.getElementById('dsgvo');
             if (!dsgvo?.checked) {
                 showError('dsgvo-error', 'Bitte stimmen Sie der Datenschutzerklärung zu.');
                 isValid = false;
@@ -182,51 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     }
 
-    // Zusammenfassung erstellen
-    function populateSummary() {
-        const summaryList = document.getElementById('summary-list');
-        summaryList.innerHTML = '';
-        const anliegen = document.querySelector('input[name="anliegen"]:checked')?.value;
-        
-        const addSummaryItem = (label, value) => {
-            if (value) {
-                const div = document.createElement('div');
-                div.className = 'summary-item';
-                div.innerHTML = `
-                    <span class="summary-label">${label}</span>
-                    <span class="summary-value">${value}</span>
-                `;
-                summaryList.appendChild(div);
-            }
-        };
-
-        addSummaryItem('Anliegen', anliegen === 'immobilie' ? 'Immobilie kaufen' : 'KMU-Kredit');
-        
-        if (anliegen === 'immobilie') {
-            const kp = document.getElementById('kaufpreisrahmen');
-            const ek = document.getElementById('eigenkapital');
-            addSummaryItem('Kaufpreisrahmen', kp?.options[kp.selectedIndex]?.text);
-            addSummaryItem('Eigenkapital', ek?.options[ek.selectedIndex]?.text);
-        } else {
-            const ks = document.getElementById('kreditsumme');
-            const ss = document.getElementById('selbststaendig_seit');
-            const file = document.getElementById('bwa_upload').files[0];
-            addSummaryItem('Kreditsumme', ks?.options[ks.selectedIndex]?.text);
-            addSummaryItem('Selbstständig seit', ss?.options[ss.selectedIndex]?.text);
-            addSummaryItem('Dokument', file ? file.name : '-');
-        }
-
-        addSummaryItem('Name', document.getElementById('name')?.value);
-        addSummaryItem('E-Mail', document.getElementById('email')?.value);
-        addSummaryItem('Telefon', document.getElementById('telefon')?.value);
-    }
-
-    // Globale Funktionen
+    // Globale Funktionen für Buttons
     window.nextStep = function(step) {
         if (validateStep(step)) {
-            if (step === 3) {
-                populateSummary();
-            }
             currentStep = step + 1;
             showStep(currentStep);
         }
@@ -251,16 +162,29 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLoading.classList.remove('hidden');
         submitBtn.disabled = true;
 
-        // Simulierte API-Anfrage
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // Simulierte API-Anfrage / Prüfung
+        await new Promise(resolve => setTimeout(resolve, 1500));
 
-        // Erfolg anzeigen
-        document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
-        document.querySelector('.form-header').classList.add('hidden');
-        document.querySelector('.form-footer')?.classList.add('hidden');
+        // Daten für die Erfolgsmeldung holen
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const standortSelect = document.getElementById('standort');
+        const standortText = standortSelect.options[standortSelect.selectedIndex].text;
+
+        // Erfolgsmeldung befüllen
+        document.getElementById('success-name').textContent = name.split(' ')[0]; // Nur Vorname
+        document.getElementById('success-email').textContent = email;
+        document.getElementById('success-standort').textContent = standortText;
+
+        // Formular ausblenden, Erfolg einblenden
+        document.querySelectorAll('.form-step').forEach(s => {
+            s.classList.remove('active');
+            s.classList.add('hidden');
+        });
+        document.querySelector('.form-progress').classList.add('hidden');
         
         const successStep = document.getElementById('step-success');
         successStep.classList.remove('hidden');
-        successStep.classList.add('active');
+        setTimeout(() => successStep.classList.add('active'), 10);
     });
 });
